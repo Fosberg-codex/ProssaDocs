@@ -1,3 +1,25 @@
 {
-  "extends": "astro/tsconfigs/base"
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "types": [
+      "acorn",
+      "babel__core",
+      "babel__generator",
+      "babel__template",
+      "babel__traverse",
+      "cookie",
+      "debug",
+      "estree",
+      "estree-jsx",
+      "hast",
+      "mdast",
+      "mdx",
+      "ms",
+      "nlcst",
+      "node",
+      "node-forge",
+      "sax",
+      "unist"
+    ]
+  }
 }

@@ -8,6 +8,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   output: 'server',
   adapter: cloudflare(),
+  
   integrations: [starlight({
     title: 'Docs | Prossa',
     customCss: [
@@ -77,5 +78,12 @@ export default defineConfig({
       // Disable the default base styles:
       applyBaseStyles: false,
     }
-  )]
+  )],
+
+  vite: {
+    ssr: {
+      noExternal: ['*'],
+      external: ['@astrojs/starlight']
+    }
+  }
 });

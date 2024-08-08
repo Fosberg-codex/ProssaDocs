@@ -1,55 +1,45 @@
-# Starlight Starter Kit: Basics
+# Prossa
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Prossa is an open-source library for checking data preprocessing techniques applicable to a dataset.
 
-```
-npm create astro@latest -- --template starlight
-```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/withastro/starlight&create_from_path=examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+## Installation
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+You can install Prossa using pip:
 
 ```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   │   └── config.ts
-│   └── env.d.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+pip install prossa
+
+<!-- or in jupyter notebooks -->
+
+!pip install prossa
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## Usage
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+Here's a quick example of how to use Prossa:
 
-Static assets, like favicons, can be placed in the `public/` directory.
+```python
+import pandas as pd
+from prossa import analyze_dataset
+from prossa import check_outliers
 
-## 🧞 Commands
+# Load your dataset
+df = pd.read_csv('your_dataset.csv')
 
-All commands are run from the root of the project, from a terminal:
+# Analyze the dataset
+analyze_dataset(df)
+```
+#### Documentation.
+To enhance your data preprocessing flow with Prossa, please refer to the documentation: [Docs](https://prossa.pages.dev/)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Contributing
 
-## 👀 Want to learn more?
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+You can find the project repository on GitHub:
+[GitHub Repository](https://github.com/Fosberg-codex/prossa)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
