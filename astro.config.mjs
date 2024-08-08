@@ -8,6 +8,10 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   output: 'server',
   adapter: cloudflare(),
+
+  build: {
+    noTypeCheck: true,
+  },
   
   integrations: [starlight({
     title: 'Docs | Prossa',
